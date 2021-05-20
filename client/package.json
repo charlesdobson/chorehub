@@ -33,6 +33,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "lint": "eslint -c .eslintrc.js --fix --ext .js,.jsx,.ts,.tsx src/",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
