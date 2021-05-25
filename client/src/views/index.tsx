@@ -1,31 +1,20 @@
-import { ReactElement } from 'react';
+import { createElement, ReactElement } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { ROUTE } from 'constants/routes';
-import HomeView from './HomeView';
-import CalendarView from './CalendarView';
-import TasksView from './TasksView';
-import RewardsView from './RewardsView';
-import WellnessView from './WellnessView';
+import { ROUTES } from 'constants/routes';
+import { BottomNav } from 'components';
 
 const Views = (): ReactElement => {
   return (
-    <Switch>
-      <Route exact path={ROUTE.HOME}>
-        <HomeView />
-      </Route>
-      <Route path={ROUTE.CALENDAR}>
-        <CalendarView />
-      </Route>
-      <Route path={ROUTE.TASKS}>
-        <TasksView />
-      </Route>
-      <Route path={ROUTE.REWARDS}>
-        <RewardsView />
-      </Route>
-      <Route path={ROUTE.WELLNESS}>
-        <WellnessView />
-      </Route>
-    </Switch>
+    <>
+      <Switch>
+        {Object.entries(ROUTES).map(([, value]) => (
+          <Route exact path={value.path} key={value.path}>
+            {createElement(value.component)}
+          </Route>
+        ))}
+      </Switch>
+      <BottomNav />
+    </>
   );
 };
 
