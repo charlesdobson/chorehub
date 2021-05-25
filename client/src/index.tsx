@@ -3,14 +3,17 @@ import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import { GlobalStyle, theme } from 'styles';
 import { ThemeProvider } from 'styled-components';
+import { BrowserRouter } from 'react-router-dom';
 import Views from 'views';
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Views />
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Views />
+      </ThemeProvider>
+    </BrowserRouter>
   );
 };
 
