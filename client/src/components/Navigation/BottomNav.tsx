@@ -8,7 +8,7 @@ const Footer = styled.footer`
   left: 0;
   bottom: 0;
   width: 100vw;
-  height: 6vh;
+  height: 7vh;
 `;
 
 const Nav = styled.nav`
@@ -27,6 +27,8 @@ const NavLink = styled.a<INavLinkProps>`
   background: white;
   color: var(--gray-5);
   border-top: 1px solid var(--gray-3);
+  font-family: var(--font-family-secondary);
+  font-size: 0.8em;
 
   display: flex;
   flex-flow: column;
