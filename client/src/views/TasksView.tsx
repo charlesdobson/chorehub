@@ -1,7 +1,8 @@
 import { ReactElement } from 'react';
+import { ViewWrapper } from 'components';
 
 const TasksView = (): ReactElement => {
-  return <div>TasksView</div>;
+  return <ViewWrapper>TasksView</ViewWrapper>;
 };
 
 export default TasksView;

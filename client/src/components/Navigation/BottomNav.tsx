@@ -4,7 +4,7 @@ import { ROUTES } from 'constants/routes';
 import styled, { css } from 'styled-components';
 
 const Footer = styled.footer`
-  position: fixed;
+  position: sticky;
   left: 0;
   bottom: 0;
   width: 100vw;
