@@ -25,7 +25,8 @@ const NavLink = styled.a<INavLinkProps>`
   text-decoration: none;
   cursor: pointer;
   background: white;
-  border-top: 1px solid #aaaaaa;
+  color: var(--gray-5);
+  border-top: 1px solid var(--gray-3);
 
   display: flex;
   flex-flow: column;
@@ -36,7 +37,8 @@ const NavLink = styled.a<INavLinkProps>`
     isActive &&
     css`
       margin-top: -1px;
-      border-top: 2px solid #111111;
+      border-top: 2px solid var(--gray-10);
+      color: var(--gray-10);
     `}
 `;
 
