@@ -1,5 +1,11 @@
 import { ReactElement } from 'react';
-import { FaHome } from 'react-icons/fa';
+import {
+  FaHome,
+  FaRegCalendar,
+  FaRegHeart,
+  FaTasks,
+  FaTrophy,
+} from 'react-icons/fa';
 import { IconType } from 'react-icons';
 import HomeView from 'views/HomeView';
 import CalendarView from 'views/CalendarView';
@@ -32,25 +38,25 @@ export const ROUTES: Record<Route, TRouteInfo> = {
   [Route.CALENDAR]: {
     path: '/schedule/',
     title: 'Calendar',
-    icon: FaHome,
+    icon: FaRegCalendar,
     component: CalendarView,
   },
   [Route.TASKS]: {
     path: '/tasks/',
     title: 'Tasks',
-    icon: FaHome,
+    icon: FaTasks,
     component: TasksView,
   },
   [Route.REWARDS]: {
     path: '/rewards/',
     title: 'Rewards',
-    icon: FaHome,
+    icon: FaTrophy,
     component: RewardsView,
   },
   [Route.WELLNESS]: {
     path: '/wellness/',
     title: 'Wellness',
-    icon: FaHome,
+    icon: FaRegHeart,
     component: WellnessView,
   },
 } as const;
