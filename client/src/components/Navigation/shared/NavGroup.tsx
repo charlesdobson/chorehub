@@ -2,6 +2,7 @@ import { createElement, ReactElement } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { ROUTES } from 'constants/routes';
 import styled, { css } from 'styled-components';
+import { mixin } from 'styles';
 
 interface INavProps {
   widthPercentage: number;
@@ -14,9 +15,9 @@ interface INavLinkProps {
   isActive: boolean;
 }
 const NavLink = styled.a<INavLinkProps>`
+  ${mixin.clickable}
   display: block;
   text-decoration: none;
-  cursor: pointer;
   background: white;
   color: var(--gray-5);
   border-top: 1px solid var(--gray-3);
