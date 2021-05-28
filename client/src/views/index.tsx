@@ -2,8 +2,11 @@ import { createElement, ReactElement } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { ROUTES } from 'constants/routes';
 import { BottomNav, TopNav } from 'components';
+import { useBreakpoints } from 'hooks';
 
 const Views = (): ReactElement => {
+  const { isDesktop } = useBreakpoints();
+
   return (
     <>
       <TopNav />
@@ -14,7 +17,7 @@ const Views = (): ReactElement => {
           </Route>
         ))}
       </Switch>
-      <BottomNav />
+      {!isDesktop && <BottomNav />}
     </>
   );
 };
