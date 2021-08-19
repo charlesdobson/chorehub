@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import BREAKPOINTS from 'constants/breakpoints';
+import Breakpoints from 'constants/breakpoints';
 
 const ViewWrapper = styled.div`
   position: relative;
   min-height: 86vh;
-  @media ${BREAKPOINTS.DESKTOP} {
+  @media ${Breakpoints.DESKTOP} {
     min-height: 93vh;
   }
   width: 100%;

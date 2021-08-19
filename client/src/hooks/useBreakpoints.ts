@@ -1,5 +1,5 @@
 import useMediaQuery from './useMediaQuery';
-import BREAKPOINTS from 'constants/breakpoints';
+import Breakpoints from 'constants/breakpoints';
 
 interface IUseBreakpoints {
   isMobile: boolean;
@@ -9,9 +9,9 @@ interface IUseBreakpoints {
 
 const useBreakpoints = (): IUseBreakpoints => {
   return {
-    isMobile: useMediaQuery(BREAKPOINTS.MOBILE),
-    isTablet: useMediaQuery(BREAKPOINTS.TABLET),
-    isDesktop: useMediaQuery(BREAKPOINTS.DESKTOP),
+    isMobile: useMediaQuery(Breakpoints.MOBILE),
+    isTablet: useMediaQuery(Breakpoints.TABLET),
+    isDesktop: useMediaQuery(Breakpoints.DESKTOP),
   };
 };
 
